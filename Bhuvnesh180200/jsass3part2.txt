@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>strength check </title>
+<body>
+
+<input id="pass_word" type="password" name = "text1" >
+<input type="submit" name ="submit" value="SUBMIT" onclick="myFunction()">
+<h2>STRENGTH CHECK</h2>
+<h2 color="red"><p id="demo"></p></h2>
+
+<script>
+var dictionay=["123456","password","123456789","12345678","12345","111111","1234567","sunshine","qwerty","iloveyou","princess","admin","welcome","666666","abc123","football","123123","monkey","654321","!@#$%^&*","charlie","aa123456","donald","password1","qwerty123"]
+function myFunction() {
+var x=document.getElementById("pass_word").value;
+var i=0,y=x,min=100000,j=0,count=0;
+for(i=0;i<dictionay.length;i++){ 
+  for(j=0;j<dictionay[i].length;j++){
+    if(y.charAt(j)!==dictionay[i].charAt(j)){
+      count++;
+     }
+  }
+   count += Math.abs(y.length-dictionay[i].length);
+   if(count<min){min=count;
+      }
+    y=x;
+    count=0;
+ }
+var strenh;
+if(min<=1){
+    strenh="Weak";
+}
+else if(min>1&&min<=4){strenh="Moderate";
+}
+else if(min>4){strenh="High";
+}
+document.getElementById("demo").innerHTML = strenh;
+}
+</script>
+
+</body>
+</html>
