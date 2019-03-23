@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{
+background : linear-gradient(to bottom, #B4B4B4 34%, #FDFDFD 65%);
+}
+.container {
+     padding:50px;
+     width:25%;
+     align:center;
+     border-radius: 30px 30px 30px 30px;
+     margin: 0px 50px 50px 400px;
+     background-color:#8E8E8E;
+     }
+.bhu{
+     background-color:#BBBBBB;
+}
+input[type=submit] {
+    width: 25em;  height: 2em;
+}
+input[type=text] {
+    width: 25em;  height: 2em;
+}
+input[type=email] {
+    width: 25em;  height: 2em;
+}
+placeholder{
+     color:#BBBBBB;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1><b>Registration form <b/></h1>
+<form>
+<h2> Enter your name<input type="text"maxlength=20 placeholder=" Name"</h2>
+<h2>Enter your Address<input type="text"maxlength=20 placeholder=" Address"></h2>
+<h2>Enter your email<input type="email"maxlength=20 placeholder=" Email"></h2>
+<h2>Enter your Mobile number<input type="text"maxlength=20 placeholder=" Mobile number"></h2>
+<h2>Enter your Account number<input type="text"maxlength=20 placeholder=" Account number"></h2>
+<h2>Enter your password<input type="text"maxlength=20 size=40px placeholder="Password"></h2>
+<input type="submit" size=40px value="Submit" width=200px>
+<h3 ><u>Admin login</u></h3>
+</div>
+</body>
+</html>
