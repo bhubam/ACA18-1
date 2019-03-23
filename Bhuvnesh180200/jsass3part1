@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<style>
+#background {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background: yellow;
+}
+#box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+</p>
+
+<div id ="background">
+<div id ="box"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("box");   
+  var pos1 = 0;
+  var pos2 = 0;
+  var flag = 1;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if(flag ==0){
+     clearInterval(id);
+}
+    if (pos1 != 450&&pos2 == 0) {
+      pos1++;  
+      elem.style.left = pos1 + 'px'; 
+    }
+    if (pos1 == 450&&pos2 != 450) {
+      pos2++;  
+      elem.style.top = pos2 + 'px'; 
+    }
+    if (pos1 != 0&&pos2 == 450) {
+      pos1--;  
+      elem.style.left = pos1 + 'px'; 
+    }
+    if (pos1 == 0&&pos2 != 0) {
+      pos2--;  
+      elem.style.top = pos2 + 'px'; 
+    if(pos2==1){
+         flag=0;
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
